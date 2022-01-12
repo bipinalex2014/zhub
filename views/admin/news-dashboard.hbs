@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="card mt-3 shadow">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table id="tableNews" class="table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Title</th>
+                            {{!-- <th>Published</th> --}}
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each news}}
+                        <tr>
+                            <td>{{this.serial}}</td>
+                            <td>{{this.title}}</td>
+                            {{!-- <td>{{this.author}}</td> --}}
+                            <td>
+                                {{#if this.active}}
+                                <span class="badge rounded-pill  bg-success">Active</span>
+                                {{else}}
+                                <span class="badge rounded-pill  bg-warning">Inactive</span>
+                                {{/if}}
+                            </td>
+                            <td>{{this.publishdate}}</td>
+                            <td>
+                                {{#if this.active}}
+                                <a href="/admin/news/modify-news/{{this._id}}" class="button primary btn-sm">Modify</a>
+                                <a href="/admin/news/disable-news/{{this._id}}" class="button danger btn-sm">Disable</a>
+                                {{else}}
+                                <a href="/admin/news/modify-news/{{this._id}}" class="button primary btn-sm">Modify</a>
+                                <a href="/admin/news/reactivate-news/{{this._id}}"
+                                    class="button primary btn-sm">Enable</a>
+                                {{/if}}
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

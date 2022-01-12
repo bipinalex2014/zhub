@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="col-md-8">
+        {{#each news}}
+        {{#with this}}
+        <h1>{{title}}</h1>
+        <h4>{{shortdesc}}</h4>
+        <h6 class="small">{{publishdate}}</h6>
+        <img width="100%" src="/images/news-images/{{filename}}" alt="{{title}}" />
+        <p>{{body}}</p>
+        <hr>
+        {{/with}}
+        {{/each}}
+    </div>
+</div>

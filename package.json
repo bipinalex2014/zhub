@@ -1,0 +1,30 @@
+{
+  "name": "web-application",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "dateformat": "^4.5.1",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.2",
+    "fb": "^2.0.0",
+    "generate-api-key": "^1.0.0",
+    "geoip-lite": "^1.4.2",
+    "hbs": "^4.1.2",
+    "http-errors": "~1.6.3",
+    "mongodb": "^4.1.0",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.12",
+    "promise": "^8.1.0",
+    "simple-thumbnail": "^1.6.5"
+  }
+}

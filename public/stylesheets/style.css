@@ -1,0 +1,185 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* background-image: url('/images/background_1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh; */
+}
+
+a {
+  color: #00B7FF;
+}
+
+.group {
+  margin-top: 25px;
+}
+
+.text-box {
+  width: 100%;
+  height: 2em;
+  border: 1;
+  border-color: hotpink;
+}
+
+.text-area {
+  width: 100%;
+  border: 1;
+  border-color: hotpink;
+}
+
+.transparent-background {
+  width: 100%;
+  height: 100%;
+  /* filter: blur(1px); */
+}
+
+body::-webkit-scrollbar {
+  width: 0.75em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 10px;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.logo {
+  display: block;
+  text-align: center;
+}
+
+.p3 {
+  padding: 0.75em;
+}
+
+.p2 {
+  padding: 0.5em;
+}
+
+.p1 {
+  padding: 0.25em;
+}
+
+.p4 {
+  padding: 1em;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: white;
+}
+
+.primary {
+  background-color: #0d6efd;
+}
+
+.primary:hover {
+  background-color: #46a049;
+}
+
+.danger {
+  background-color: #f44336;
+}
+
+/* Red */
+
+.danger:hover {
+  background: #da190b;
+}
+
+.table-full-width {
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  padding: 1em;
+  box-shadow: 0px 0px 20px grey;
+}
+
+.card .card-content {
+  padding: 2em;
+}
+
+.form-textbox {
+  width: 100%;
+  outline: none;
+  height: 2em;
+  border: 1px soild green;
+  border-radius: 0.3em;
+  margin: 1em;
+}
+
+.form-textbox:focus {
+  outline: 1px solid #00B7FF;
+}
+
+.column-lg-8 {
+  width: 100%;
+  display: flex;
+}
+
+.text-danger {
+  color: #f44336;
+}
+
+.mt-1 {
+  margin-top: 0.25em;
+}
+
+.mt-2 {
+  margin-top: 0.50em;
+}
+
+.mt-3 {
+  margin-top: 0.75em;
+}
+
+.mt-4 {
+  margin-top: 1.0em;
+}
+
+.mt-5 {
+  margin-top: 1.25em;
+}
+
+.mt-6 {
+  margin-top: 1.5em;
+}
+
+@media (min-width:1365px) {
+  .column-lg-8 {
+    width: 66.67%;
+    display: flex;
+  }
+}

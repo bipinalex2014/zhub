@@ -1,0 +1,137 @@
+<section class="mt-5 mb-5">
+    <div class="container">
+
+        <div class="card column-lg-8">
+            <div class="card-header bg-primary text-light">
+               <dov class="card-header-title">
+                    Create Company
+               </dov>
+            </div>
+            <div class="card-content">
+                <form id="formNewCompany" action="/admin/create-company" method="POST">
+                    <div class="row mt-3">
+                        <div class="column">
+                            <label for="name">Company Name <span class="has-text-danger">*</span> </label>
+                        </div>
+                        <div class="column">
+
+                            <input class="form-textbox" placeholder="Your company name" type="text" name="name"
+                                id="name">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="column">
+                            <label for="address">Address<span class="has-text-danger">*</span></label>
+                        </div>
+                        <div class="column">
+                            <textarea placeholder="Full address" class="form-textbox" name="address" id="address"
+                                rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="column">
+                            <label for="email">Email address<span class="has-text-danger"> * </span></label>
+                        </div>
+                        <div class="column">
+                            <input placeholder="yourname@example.com" class="form-textbox" type="text" name="email"
+                                id="email">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="column">
+                            <label for="contactperson">Contact Person<span class="has-text-danger">*</span></label>
+                        </div>
+                        <div class="column">
+                            <input placeholder="Contact person" class="form-textbox" type="text" name="contactperson"
+                                id="contactperson">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="column">
+                            <label for="designation">Designation<span class="has-text-danger">*</span></label>
+                        </div>
+                        <div class="column">
+                            <input placeholder="Designation" class="form-textbox" type="text" name="designation"
+                                id="designation">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="column">
+                            <label for="contactnumber">Contact number<span class="has-text-danger">*</span></label>
+                        </div>
+                        <div class="column">
+                            <input placeholder="Mobile number" class="form-textbox" type="text" name="contactnumber"
+                                id="contactnumber">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="column">
+                            <label>Location <span class="has-text-danger">*</span></label>
+                        </div>
+                        <div class="column">
+                            <div class="row">
+                                <div class="column">
+                                    <div class="form-group">
+                                        {{!-- <label for="roomno">Room no.</label> --}}
+                                        <input placeholder="Room" class="form-textbox" type="text" name="roomno"
+                                            id="roomno">
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="form-group">
+                                        {{!-- <label for="floorno">Floor no.</label> --}}
+                                        <input placeholder="Floor" class="form-textbox" type="text" name="floorno"
+                                            id="floorno">
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="form-group">
+                                        {{!-- <label for="building">Building</label> --}}
+                                        <input placeholder="Building" class="form-textbox" type="text" name="building"
+                                            id="building">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="column">
+                            <label for="username">Username<span class="has-text-danger">*</span></label>
+                        </div>
+                        <div class="column">
+                            <input placeholder="Username" class="form-textbox" type="text" name="username"
+                                id="username">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="column">
+                            <label for="password">Password<span class="has-text-danger">*</span></label>
+                        </div>
+                        <div class="column">
+                            <input placeholder="Password" class="form-textbox" type="password" name="password"
+                                id="password">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="column">
+                            <label for="confirmpassword">Confirm password<span class="has-text-danger">*</span></label>
+                        </div>
+                        <div class="column">
+                            <input placeholder="Confirm password" class="form-textbox" type="password"
+                                name="confirmpassword" id="confirmpassword">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="column">
+
+                        </div>
+                        <div class="column">
+                            <button class="button is-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

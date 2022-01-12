@@ -1,0 +1,63 @@
+{{!-- <select name="country" id="">
+    <option value="">..</option>
+    {{#each countries}}
+    <option value="{{this.name}}">{{this.name}}</option>
+    {{/each}}
+</select> --}}
+<p id="token">Tokrn : </p>
+
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging.js"></script>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyA7baEqkGfeU1YDKhvV097aQMavMNeOIdI",
+        authDomain: "zayan-birthday.firebaseapp.com",
+        projectId: "zayan-birthday",
+        storageBucket: "zayan-birthday.appspot.com",
+        messagingSenderId: "596728405659",
+        appId: "1:596728405659:web:529761520eaeaa393df03e",
+        measurementId: "G-J4R5MSKK63"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    const messaging = firebase.messaging();
+
+    function initializeFirebaseMessaging() {
+        messaging
+            .requestPermission()
+            .then(() => {
+                console.log('Notification Permission')
+            })
+            .then((token) => {
+                console.log("Token : ", token);
+                document.getElementById("token").innerHTML = token;
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
+    messaging.onMessage(function (payload) {
+        console.log(payload);
+    })
+    messaging.onTokenRefresh(function () {
+        messaging.getToken()
+            .then((newToken) => {
+                console.log("New token", newToken);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    })
+    initializeFirebaseMessaging();
+</script>

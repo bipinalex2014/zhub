@@ -1,0 +1,39 @@
+<div class="container mt-3">
+
+    <h2 class="title is-3">List of companies</h2>
+    <div class="w-16 md:w-32 lg:w-48">
+
+        <div class="card shadow">
+            <div class="card-content">
+                <div class="table-responsive">
+                    <table class="table table-full-width">
+                        <thead>
+                            <tr>
+                                <th>Sl No.</th>
+                                <th>Name</th>
+                                <th>Room</th>
+                                <th>Floor</th>
+                                <th>Building</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each companies}}
+                            <tr>
+                                <td>{{this.serial}}</td>
+                                <td>{{this.name}}</td>
+                                <td>{{this.roomno}}</td>
+                                <td>{{this.floorno}}</td>
+                                <td>{{this.building}}</td>
+                                <td>
+                                    <a class="button is-info" href="/admin/company/{{this._id}}/home">View</a>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  

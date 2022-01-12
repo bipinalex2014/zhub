@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <form id="formCreatePhoto" action="/admin/gallery/new-photo-gallery" method="POST"
+                    enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="form-group mt-3">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" name="title" id="title">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="subtitle">Sub-Title</label>
+                            <input type="text" name="subtitle" id="subtitle" class="form-control">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="files">Upload files</label>
+                            <input multiple="true" type="file" name="photos" id="files" class="form-control">
+                        </div>
+                        <div class="form-group mt-3">
+                            <button class="button primary"> Upload </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

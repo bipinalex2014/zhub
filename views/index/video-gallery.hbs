@@ -1,0 +1,34 @@
+<div class="container">
+    {{#each items}}
+    {{#with this}}
+    <div class="row mt-5">
+        <div class="col-md-8">
+            <h1>{{title}}</h1>
+            <h4>{{subtitle}}</h4>
+            <span class="small text-grey">{{timestamp}}</span>
+            <div class="row">
+                {{#each files}}
+                <div class="col-md-4 mx-5">
+                    <video id="my-video" class="video-js" controls preload="auto" width="320" height="240"
+                        poster="/images/logos/z_hub_logo.jpg" data-setup="{}">
+                        <source src="/videos/gallery/{{this}}" type="video/mp4" />
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                    </video>
+                </div>
+
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{/with}}
+    {{/each}}
+</div>
+
+
+{{!-- <video width="320" height="240" controls>
+    <source src="/videos/gallery/{{this}}">
+</video> --}}

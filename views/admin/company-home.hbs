@@ -1,0 +1,52 @@
+<div class="container">
+    {{#with company}}
+    <div class="row mt-5">
+        <div class="col-lg-5">
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="logo display-flex justify-center">
+                            <img class="responsive-img" src="/images/Logos/{{logoname}}" alt="Icon">
+                            <h5>{{name}}</h5>
+                            {{#if blockStatus}}
+                            <span id="blockStatus" class="badge bg-danger rounded-pill">Blocked</span>
+                            {{else}}
+                            <span id="blockStatus" class="badge bg-success rounded-pill">Active</span>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card mt-3">
+                    <div class="card-body p3">
+                        <div class="row">
+                            <div class="col-lg-5">{{designation}}</div>
+                            <div class="col-lg-7">{{contactperson}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-5">Email</div>
+                            <div class="col-lg-7">{{email}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        {{#if blockStatus}}
+                        <button id="btnBlockStatus" value="1" class="button primary rounded-pill" type="button"
+                            onclick="changeBlockStatus('{{_id}}')">Activate</button>
+                        {{else}}
+
+                        <button id="btnBlockStatus" value="0" class="button danger rounded-pill" type="button"
+                            onclick="changeBlockStatus('{{_id}}')">Block</button>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {{/with}}
+</div>

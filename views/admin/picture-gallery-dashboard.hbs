@@ -1,0 +1,38 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <th>Sl</th>
+                        <th>Title</th>
+                        <th>Subtitle</th>
+                        <th>No.of Photos</th>
+                        <th>Options</th>
+                    </thead>
+                    <tbody>
+                        {{#each pics}}
+                        <tr>
+                            <td></td>
+                            <td>{{this.title}}</td>
+                            <td>{{this.subtitle}}</td>
+                            <td>{{this.count}}</td>
+                            <td>
+                                {{#if this.active}}
+                                <a class="btn btn-sm btn-warning"
+                                    href="/admin/gallery/disable-gallery/{{this._id}}">Disable</a>
+                                {{else}}
+                                <a class="btn btn-sm btn-info"
+                                    href="/admin/gallery/enable-gallery/{{this._id}}">Enable</a>
+                                {{/if}}
+
+                                <a class="button danger" href="/admin/gallery/delete-gallery/{{this._id}}">Delete</a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

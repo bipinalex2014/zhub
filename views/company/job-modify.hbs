@@ -1,0 +1,101 @@
+<header>
+    <div class="container">
+        <div class="row p-4 mt-5">
+            {{!-- <div class="col-12 mt-4"> --}}
+                <div class="card shadow" style="padding:0px;border-radius :10px;">
+                    {{!-- <div class="card-body"> --}}
+                        {{!-- <div class="table-responsive"> --}}
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th class="border-bottom py-3" style="min-width: 50px;">#</th>
+                                <th class="border-bottom py-3" style="min-width: 180px;">Job title</th>
+                                <th class="border-bottom py-3">Company Name</th>
+                                <th class="border-bottom py-3" style="min-width: 150px;">Posting Date</th>
+
+                                {{!-- <th class="border-bottom py-3">Department</th> --}}
+                                
+                                <th class="border-bottom py-3">Closing Date</th>
+                                {{!-- <th class="border-bottom py-3">Phone Nummber</th>
+                                <th class="border-bottom py-3">Consulting Doctor</th> --}}
+                                {{!-- <th class="border-bottom py-3">Place</th> --}}
+                                {{!-- <th class="border-bottom py-3" style="min-width: 150px;">Date</th>
+                                <th class="border-bottom py-3">Time</th>
+                                <th class="border-bottom py-3" style="min-width: 220px;">Doctor</th>
+                                <th class="border-bottom py-3">Fees</th>
+                                <th class="border-bottom py-3" style="min-width: 150px;"></th> --}}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each data}}
+                            <tr style="height: 50px;padding: 10px;vertical-align:middle;border-radius:4px"> 
+
+                                <th>{{this.ind}}</th>
+                                {{!-- <td class="py-3">
+                                    <a href="#" class="text-dark">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/client/01.jpg"
+                                                class="avatar avatar-md-sm rounded-circle shadow" alt=""
+                                                id="exifviewer-img-2" exifid="1181978510"
+                                                oldsrc="https://shreethemes.in/doctris/admin/images/client/01.jpg">
+                                            <span class="ms-2">{{this.fname}} {{this.lname}}</span>
+                                        </div>
+                                    </a>
+                                </td> --}}
+                                <td>{{this.jobTitle}}</td>
+                                {{!-- <td>{{this.age}}</td> --}}
+                                <td>{{this.companyName}}</td>
+                                {{!-- <td>{{this.department}}</td> --}}
+                                <td>{{this.postDate}}</td>
+                                <td>{{this.closeDate}}</td>
+                                {{!-- <td>{{this.doctor}} : {{this.department}}</td> --}}
+                                
+                                
+                                {{!-- <td  style="width: auto;"><a href="/doctor/verify/{{this._id}}" class="btn btn-primary patientDelete">Shedule Time</a></td> --}}
+                                <td><a href="/company/delete/{{this._id}}" class="btn btn-danger patientDelete" style="width: 80px;padding:0px;margin:0px;vertical-align:middle;">delete</a></td>
+                                <td><a href="/company/edit/{{this._id}}" class="btn btn-success patientDelete" style="width: 80px;padding:0px;margin:0px;vertical-align:middle;">update</a></td>
+                                {{#if this.active}}
+                                <td><a href="/company/job-post-mode/{{this._id}}" class="btn btn-success patientDelete" style="width: 80px;padding:0px;margin:0px;vertical-align:middle;">disable</a></td>
+                                {{else}}
+                                <td><a href="/company/job-post-mode/{{this._id}}" class="btn btn-success patientDelete" style="width: 80px;padding:0px;margin:0px;vertical-align:middle;background-color:rgb(247, 75, 12)">enable</a></td>
+                                {{/if}}
+                                {{!-- <td><input type="submit" role="button" class="btn btn-success" value="{{this._id}}" id="button" style="width: 80px;padding:0px;margin:0px;vertical-align:middle;"></td>
+                                <td style="display: none;"><input type="text" id="id" value="{{this._id}}"></td> --}}
+                                {{!-- <td>20th Dec 2020</td>
+                                <td>11:00AM</td>
+                                <td>
+                                    <a href="#" class="text-dark">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/doctors/01.jpg"
+                                                class="avatar avatar-md-sm rounded-circle border shadow" alt="">
+                                            <span class="ms-2">Dr. Calvin Carlo</span>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>$50/Patient</td>
+                                <td class="text-end">
+                                    <a href="#" class="btn btn-icon btn-pills btn-soft-primary" data-bs-toggle="modal"
+                                        data-bs-target="#viewappointment"><i class="uil uil-eye"></i></a>
+                                    <a href="#" class="btn btn-icon btn-pills btn-soft-success" data-bs-toggle="modal"
+                                        data-bs-target="#acceptappointment"><i class="uil uil-check-circle"></i></a>
+                                    <a href="#" class="btn btn-icon btn-pills btn-soft-danger" data-bs-toggle="modal"
+                                        data-bs-target="#cancelappointment"><i class="uil uil-times-circle"></i></a>
+                                </td> --}}
+
+                            </tr>
+
+                            {{/each}}
+                        </tbody>
+                    </table>
+                {{!-- </div> --}}
+                    {{!-- </div> --}}
+                </div>
+            {{!-- </div> --}}
+        </div>
+    </div>
+
+    {{!-- </div> --}}
+
+
+
+</header>

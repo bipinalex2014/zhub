@@ -1,0 +1,105 @@
+<div class="nav-small" style="list-style-type: none;">
+    <li class="nav-item">
+        <a class="nav-link" href="/company/logout">Logout</a>
+    </li>
+</div>
+<div class="container">
+    {{#if successStatus}}
+    <div class="row">
+
+        <p>{{message}}</p>
+    </div>
+    {{/if}}
+    <div class="row-lg-9">
+        <div class="card shadow p-3 mb-5 bg-white rounded mt-5" style="width: 45rem;">
+            <div class="col-lg-13">
+                <form id="jobPostingForm" action="/company/job-post" method="POST">
+                    <fieldset>
+                        <div class="section postdetails p-5">
+                            <h4>Post Your Job</h4>
+                            <div class="row form-group mb-5">
+                                <label class="col-sm-3 label-title mb-3">Job Category</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="jobTitle"
+                                        placeholder="ex, web developer">
+                                </div>
+                            </div>
+
+                            <div class="row form-group mb-5">
+
+                                <label class="col-sm-3 label-title mb-2"> Posting Date </label>
+                                <div class="col-sm-9">
+                                    <input name="postDate" type="date"
+                                        class="flatpickr flatpickr-input form-control active" id='checkin-date1'
+                                        onkeydown="return false" style="background-color:white" placeholder="select posting date">
+                                </div>
+
+                            </div>
+                            <div class="row form-group mb-5">
+
+                                <label class="col-sm-3 label-title mb-2"> Closing Date </label>
+                                <div class="col-sm-9">
+                                    <input name="closeDate" type="date"
+                                        class="flatpickr flatpickr-input form-control active" id='checkin-date2'
+                                        onkeydown="return false" style="background-color:white" placeholder="select closing date">
+                                </div>
+
+                            </div>
+                            <div class="row form-group mb-5">
+
+                                <label class="col-sm-3 label-title mb-2"> Contact email </label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" id="email" name="email" type="email" onchange="">
+                                </div>
+
+                            </div>
+                            <div class="row form-group mb-5">
+
+                                <label class="col-sm-3 label-title mb-2"> Brief Description </label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" id="textarea" name="description"
+                                        placeholder="Write few lines about your jobs" rows="8"></textarea>
+                                </div>
+
+                            </div>
+                            <div class="row form-group mb-5">
+
+                                <label class="col-sm-3 label-title mb-2"> Preferred Skills </label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" id="textarea" name="skills"
+                                        placeholder="Write few lines about your jobs" rows="8"></textarea>
+                                </div>
+
+                            </div>
+
+                            
+                            <div class="row" style="float: right;">
+                                <div class="col-lg-4">
+                                    <button type="submit" class="btn btn-success"
+                                        style="width: 180px;height: 50px;">Post Your Job</button>
+                                </div>
+                            </div>
+
+
+
+                            {{!-- <div id="my_modal" class="modal fade">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title">Modal Title</h4>
+                                        </div>
+                                        <div class="modal-body"></div>
+                                    </div>
+                                </div>
+                            </div> --}}
+
+
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

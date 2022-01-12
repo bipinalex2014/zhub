@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="card shadow p-3 mb-5 bg-white rounded mt-5" style="width: 45rem;">
+            <div class="col-lg-13 p-2">
+                {{!-- {{#each}} --}}
+                <div class="block"> 
+                  <p class="head">{{data.jobTitle}}</p>
+				</div>
+                <div class="block">                                
+                  <p class="head">Posted on:</p>
+                  <p>{{data.postDate}}</p>
+                </div>
+                <div class="block">                                
+                  <p class="head">Closing on:</p>
+                  <p>{{data.closeDate}}</p>
+                </div>
+                <div class="block">                                
+                  <p class="head">Contact email:</p>
+                  <a href="mailto:{{data.email}}" target="_blank">{{data.email}}</a><br>            
+                </div>
+                <div class="block my-3">
+                    <p class="head">Brief description</p>
+                    <p style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin: 0cm; padding: 0px; outline: 0px; font-size: 14px; line-height: 21px; box-sizing: border-box; color: #333333; font-family: 'Open Sans', sans-serif; text-indent: 0cm;"><span style="background: transparent; margin: 10px; padding: 0px; outline: 0px; font-size: 15px; box-sizing: border-box; font-family: sans-serif;">{{data.description}}</span></p>
+                </div>
+                <div class="block">
+                    <p class="head">Preferred skills</p>
+                    <p>&nbsp;We're looking for someone with:</p>
+                    <p>Technical Skills :&nbsp;</p>
+                    <p>{{data.skills}}</p>
+                </div>
+                <div class="block">
+                    <p class="head">Qualification</p>
+                    <p>{{data.qualification}}</p>
+                </div>
+                {{!-- {{/each}} --}}
+            </div>
+
+        </div>        
+    </div>
+</div>
